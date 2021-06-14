@@ -31,7 +31,8 @@ public class HomeController {
 				
 				new Book(1, "java", 3000),
 				new Book(2, "PHP", 2000),
-				new Book(3, "Android", 1000)
+				new Book(3, "Android", 1000),
+				new Book(4, "Python", 1000)
 				).collect(Collectors.toList());
 		
 		return books;
@@ -40,7 +41,7 @@ public class HomeController {
 @GetMapping("/book")
 public Book book()
 {
-	return new Book(1, "java", 3000);
+	return new Book(2, "PHP", 3000);
 }
 @PostMapping("/book")
 public String createNewBook(@RequestBody Book book)
